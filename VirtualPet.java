@@ -94,4 +94,6 @@ public void tick(){
     sickness += 1 + (int) (Math.random() * 5);
 }
 
+// Couldn't figure out how to prevent negative outputs.
 }
+
