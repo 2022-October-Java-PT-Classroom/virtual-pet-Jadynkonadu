@@ -41,14 +41,13 @@ public class VirtualPetApp {
             System.out.println("--------------------------");
             System.out.println("Check in again another time!");
             System.out.println("--------------------------");
-            continue;
         }
 
         else if (choice == 1){
             if (pet.getHunger() > 5){
-                System.out.println(petName + " isn't hungry!");
+                System.out.println(">> " + petName + " isn't hungry!");
             }else
-            System.out.println(petName + " loved the treat!");
+            System.out.println(">> " + petName + " loved the treat!");
             pet.updateHunger(+1);
             pet.updateThirst(-1);
             pet.updateWaste(+2);
@@ -57,18 +56,18 @@ public class VirtualPetApp {
         }
         else if (choice == 2){
             if (pet.getThirst() > 5){
-                System.out.println(petName + " isn't thirsty!");
+                System.out.println(">> " + petName + " isn't thirsty!");
             }else
-            System.out.println(petName + "'s thirst is quenched!");
+            System.out.println(">> " + petName + "'s thirst is quenched!");
             pet.updateThirst(+1);
             pet.updateWaste(+1);
             // showPetNeeds(pet);
         }
         else if (choice == 3){
             if (pet.getBoredom() < 5){
-                System.out.println(petName + " doesn't want to play!");
+                System.out.println(">> " + petName + " doesn't want to play!");
             }else
-            System.out.println(petName + " loved today's game of fetch!");
+            System.out.println(">> " + petName + " loved today's game of fetch!");
             pet.updateThirst(-2);
             pet.updateHunger(-1);
             pet.updateBoredom(-2);
@@ -76,9 +75,9 @@ public class VirtualPetApp {
         }
         else if (choice == 4){
             if (pet.getWaste() < 5){
-                System.out.println(petName + " doesn't want to potty");
+                System.out.println(">> " + petName + " doesn't want to potty");
             }else
-            System.out.println(petName + " needed that bathroom break!");
+            System.out.println(">> " + petName + " needed that bathroom break!");
             pet.updateThirst(-1);
             pet.updateHunger(-2);
             pet.updateWaste(-3);
@@ -86,9 +85,9 @@ public class VirtualPetApp {
         }
         else if (choice == 5){
             if (pet.getSickness() < 5){
-                System.out.println(petName + " is in good health!");
+                System.out.println(">> " + petName + " is in good health!");
             }else
-            System.out.println(petName + " is feeling better after going to the vet!");
+            System.out.println(">> " + petName + " is feeling better after going to the vet!");
             pet.updateSickness(-3);
             // showPetNeeds(pet);
         }
@@ -96,7 +95,7 @@ public class VirtualPetApp {
             pet.tick();
         }
         else{
-            System.out.println("Please choose something to do with " + petName);
+            System.out.println(">> " + "Please choose something to do with " + petName);
         }
     
         }while (choice != 7);
@@ -116,3 +115,4 @@ public class VirtualPetApp {
         System.out.println("Welcome to Virtual Pet! You are now the proud owner of " + petName);
     }
 }
+
